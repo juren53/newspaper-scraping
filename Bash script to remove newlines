@@ -1,0 +1,4 @@
+Bash script to remove newlines
+
+
+awk '{gsub(/\\n/,"\n")}1' input-file > output-file

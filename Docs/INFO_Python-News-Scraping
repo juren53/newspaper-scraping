@@ -1,0 +1,40 @@
+              Info Python News Scraping
+
+
+
+Initial setup w BeautifulSoup module
+===========================================================
+from bs4 import BeautifulSoup
+import requests
+url = 'https://www.theguardian.com/sport/2018/oct/17/smith-and-carlos-embodied-many-african-americans-summer-of-love-and-reckoning'
+r = requests.get(url)
+html = r.text
+soup = BeautifulSoup(html, 'lxml')
+
+===========================================================
+List paragraphs 
+
+soup('p')
+
+-----------------------------------------------------------
+List number of paragraphs
+
+len(soup('p'))
+
+-----------------------------------------------------------
+Strip html tags w Beautiful Soup:  
+
+text = soup.get_text()
+print(text)
+
+============================================
+
+
+Initial setup w newspaper module [using Python 3]
+
+from newspaper import Article
+url = u'http://fox13now.com/2013/12/30/new-year-new-laws-obamacare-pot-guns-and-drones/'
+article = Article(url)
+article.download()
+
+

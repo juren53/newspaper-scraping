@@ -1,0 +1,2 @@
+alias News='/home/juren/Projects/Newspaper-scraping/code/news'
+
